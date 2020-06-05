@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.phil.icurrency.realtime.RealTimeRateView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="?android:attr/actionBarSize" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:background="@android:color/white"
+        android:layout_marginRight="8dp">
+
+        <TextView
+            android:id="@+id/amountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="Amount:"/>
+
+        <EditText
+            android:id="@+id/amountEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_toRightOf="@id/amountTextView"
+            android:background="@android:color/white"
+            android:hint="1"
+            android:inputType="number"
+            android:maxLength="14"
+            android:paddingLeft="4dp" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_gravity="bottom"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="6dp"
+        app:fabCradleRoundedCornerRadius="0dp"
+        tools:ignore="BottomAppBar">
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/currencySelectedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_currency_exchange"
+        app:layout_anchor="@+id/bottomBar"
+        app:layout_anchorGravity="center_horizontal" />
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/indicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:indicatorColor="@color/colorPrimary"
+        app:indicatorName="BallPulseIndicator" />
+
+</com.phil.icurrency.realtime.RealTimeRateView>
